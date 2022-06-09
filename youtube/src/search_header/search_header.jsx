@@ -14,6 +14,7 @@ const SearchHeader = ({onSearch}) => {
     const onChange = (event) => {
         if(event.key === 'Enter') {
             handleSearch();
+            console.log('enter');
         }
     }
     return (
@@ -27,7 +28,7 @@ const SearchHeader = ({onSearch}) => {
                 className={styles.input} 
                 type="search" 
                 placeholder="Search..." 
-                onChange={onChange}
+                onKeyDown={onChange}
             />
             <button className={styles.button} type="submit" onClick={onClick}>
                 <img src="/images/search.png" alt="search" />
